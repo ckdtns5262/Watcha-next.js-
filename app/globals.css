@@ -2,26 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+input[type="checkbox"]  {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border :    solid #999;
+    appearance: none;  /* 네이티브로 지원되는 모양들을 해제하거나 추가할 때 이용할수 있으며 라디오처럼 둥글게 만들거나 커스텀 시킬 때 사용*/
+    vertical-align: middle; /* input과 text 수평정렬*/
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+input[type="checkbox"]:checked {
+    background: #F82F62;
+    border: none;
+    /* background: url('https://blog.kakaocdn.net/dn/p2kpN/btrL4lwWrqf/KqNevAyZKWsoCB5ijL9qcK/img.png'); */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }

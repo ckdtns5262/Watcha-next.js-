@@ -1,0 +1,21 @@
+
+
+
+
+export default [
+{
+    link1 : 'https://an2-img.amz.wtchn.net/image/v2/6ayGSzzQtXwX6VZ9bz94VA.webp?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZMU16STVPVGMyTWpjNU16VTFORGN3T1NKOS5QUWlIa2s1S0ZvUXdBZlJMTTlucC1RZC1BUkpPeEw2Njg3SE5aTDVhZ3hv'
+},
+{
+    link2 : 'https://an2-img.amz.wtchn.net/image/v2/EyrnXC-Wh6UIpMVxgjlweg.webp?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZeE5ETXhPRFE1TVRFM09URXhOVGd5TkNKOS5pbGE2TW9OTEY5T19lVklMYnE4UnZyOXZrXzhVU0x1RTJxaHN5T2pRbzVB'
+},
+{
+    link3 : 'https://an2-img.amz.wtchn.net/image/v2/MVo5yeoK0Bsj7sxg7VB3ew.webp?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZMk9ERTJNVFl4TXpReE5qZzRNRFUxTkNKOS56WHFNaUZEdzhaTXBKY19SbFpsYzVlYTlaRTlNN0NMQlpnanE1dER1VEhr'
+},
+{
+    link4 : 'https://an2-img.amz.wtchn.net/image/v2/SWjIQzh8SdC5KH7iJEo5Ag.webp?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZd09EY3hOVFUyTXpJNE1UWTFNalV6TWlKOS55eXpCVnF2NXBtLWRXeXR4b2Nid0pnemhqYWp5dzhiYVZfVXBvVmRWbEVN'
+},
+{
+    link5 : 'https://an2-img.amz.wtchn.net/image/v2/aeV4I4CBeIBxZfz1EMeuAw.webp?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZME1qY3pOalEzTlRFd09EQXdOREk0TnlKOS5hUFZfX3FMa25NM3RtVUFTODhZLXg0UUFoT3VKS0dLRGhtQlJpc1ZFcVJJ'
+}
+]
