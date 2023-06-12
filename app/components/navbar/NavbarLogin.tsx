@@ -20,6 +20,9 @@ const clickHandler = (link:any)=>{
     router.push('/signup')
    }
 }
+const clickHome = ()=>{
+    router.push('/')
+}
 
 // console.log(window.screenY)
 
@@ -32,6 +35,7 @@ const router = useRouter()
           width={100}
           height={100}
           alt="LOGO"
+          onClick={clickHome}
           className="ml-8 cursor-pointer mt-3"
         />
         <button 

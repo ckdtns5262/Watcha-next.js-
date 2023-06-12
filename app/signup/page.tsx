@@ -7,6 +7,7 @@ import { useState } from "react";
 const LogIn = () => {
   //   type Variant = "LOGIN" | "REGISTER"
 
+  const [name, setName] = useState('')
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const [variant , setVariant] = useState<Variant>('LOGIN')
@@ -23,12 +24,12 @@ const LogIn = () => {
             <Input
               id="name"
               placeholder="이름 (2자 이상)"
-              type="email"
-              name="email"
+              type="text"
+              name="name"
               onChange={(e: any) => {
-                setEmail(e.target.value);
+                setName(e.target.value);
               }}
-              value={email}
+              value={name}
               autoComplete="off"
 
             />
@@ -56,7 +57,7 @@ const LogIn = () => {
               autoComplete="off"
 
             />
-            </form>
+          
  <div className="mt-6">
       <ul className="text-white text-xs space-y-2">
       <li className="space-x-2">
@@ -104,7 +105,7 @@ const LogIn = () => {
               계정 생성하기
             </button>
     <span className="flex text-white text-xs mt-3 justify-center">결제 정보요? 충분히 둘러보시고 입력해도 늦지 않아요</span>
-
+    </form>
           </div>
         </div>
       </div>

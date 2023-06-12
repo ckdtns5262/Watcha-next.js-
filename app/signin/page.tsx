@@ -6,7 +6,9 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { TfiTwitterAlt } from "react-icons/tfi";
 import { FaApple } from "react-icons/fa";
-import { RiKakaoTalkLine } from "react-icons/ri";
+import { AiFillGithub } from "react-icons/ai";
+import {signIn} from 'next-auth/react'
+
 const LogIn = () => {
 
   type Variant = "LOGIN" | "REGISTER"
@@ -14,6 +16,11 @@ const LogIn = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [variant , setVariant] = useState<Variant>('LOGIN')
+    
+    const loginHandler = ()=>{
+      signIn()
+    }
+
     return (
         <div className=" w-full h-screen bg-no-repeat bg-cover bg-[url('https://an2-img.amz.wtchn.net/image/v2/v_rtGmsGmmSGuScg0hC76g.webp?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmFXMWhaMlV2TVRZNE5Ea3hOVGN4T1RJM05UQTVOVGs0TXlKOS5mRjlhcmYwZWNJd2cyNUl4YnBfZkZyV0E5UmpkMnhLdmVEUnhUUU1jUXN3')]">
             <div className="w-full h-screen bg-black bg-opacity-60 bg-cover">
@@ -24,7 +31,7 @@ const LogIn = () => {
                   <h2 className="text-white text-xl font-semibold">로그인</h2>
                   <p className="text-xs mt-1 text-gray-400 hover:underline cursor-pointer">비밀번호를 잊어버리셨나요?</p>
                   </div>
-                  <form>
+                  <form action='/api/auth/login' method="POST">
                 <Input
               id="email"
               placeholder="이메일 (example@gmail.com)"
@@ -52,11 +59,12 @@ const LogIn = () => {
               value={password}
               autoComplete="on"
             />
-            </form>
              <button 
               className="bg-[#F82F62] opacity-50   rounded-full mt-4 py-2 text-white w-full" type="submit">
                 로그인
               </button>
+            </form>
+
               <hr className="mt-8 opacity-25"></hr>
               <div className="mt-4">
                 <h2 className="text-gray-400  text-xs">
@@ -64,10 +72,12 @@ const LogIn = () => {
                 </h2>
               </div>
               <div className="flex flex-row items-center gap-6 mt-4 justify-center">
-                <div className="w-10 h-10 bg-yellow-300 rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
-                  <RiKakaoTalkLine size={25} fill="black" />
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
+                    onClick={loginHandler}>
+                  <AiFillGithub size={25} fill="black" />
                 </div>
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
+                    onClick={loginHandler}>
                   <FcGoogle size={25} />
                 </div>
                 <div className="w-10 h-10 bg-[#00a2fa] rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">

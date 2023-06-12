@@ -1,15 +1,20 @@
-import Image from 'next/image'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/Footer'
 import Swiper from './components/Swiper'
 import Imglink from '../util/link'
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/pages/api/auth/[...nextauth]'
 
-export default function Home() {
+export default async function Home() {
 
-
+  let session = await getServerSession(authOptions)
+  if(session){
+    console.log(session.user)
+  }
   return (
     <div className='relative'>
       <Navbar/>
+      
       <Swiper
       title="영화, 드라마, 예능, 다큐멘터리, 웹툰을 무제한으로" 
       sTitle="매주 5백 여편의 신작이 업데이트 되며, 추가 요금은 전혀 없어요."

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState , useEffect} from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 
 const Navbar = () => {
@@ -11,18 +12,27 @@ const [scrollMove, setScrollMove] = useState(false)
 
 // 스크롤이벤트(스크롤이 내려가면 navbar bg가 black으로 바뀜)
 useEffect(()=>{
-    if(window.scrollY < 0){
-        setScrollMove(false)
-    } else if(window.scrollY > 0) {
-        setScrollMove(true)
-    }
+    const handleScroll = ()=>{
+        if(window.scrollY == 0){
+            setScrollMove(false)
+        } else if(window.scrollY > 0) {
+            setScrollMove(true)
+        }
+    };
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll',handleScroll)
+   
 },[scrollMove])
+
+
+
+
 
 const clickHandler = (link:any)=>{
     router.push('/signin')
 }
 
-// console.log(window.screenY)
+
 
 const router = useRouter()
     return ( 
